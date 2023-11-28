@@ -1,0 +1,48 @@
+<div *ngIf="!authService.isAuthenticated()">
+  <div class="flex items-center justify-center h-screen bg-gray-200">
+
+    <div class="bg-white p-8  rounded shadow-md w-96 rounded-2xl">
+      <div class="flex justify-center">
+        <img src="./../../../assets/user.png" alt="" class="w-48" />
+      </div>
+      <form (ngSubmit)="login()">
+        <div class="mb-4">
+          <label
+            for="username"
+            class="block text-gray-600 text-md font-medium mb-2"
+            >Usuario</label
+          >
+          <input
+            type="text"
+            id="username"
+            [(ngModel)]="username"
+            name="username"
+            class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+            required
+          />
+        </div>
+        <div class="mb-4">
+          <label
+            for="password"
+            class="block text-gray-600 text-md font-medium mb-2"
+            >Contraseña</label
+          >
+          <input
+            type="password"
+            id="password"
+            [(ngModel)]="password"
+            name="password"
+            class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+            required
+          />
+        </div>
+        <button
+          type="submit"
+          class="w-full font-bold bg-blue-500 text-white p-2 rounded hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue"
+        >
+          INGRESAR
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
