@@ -31,7 +31,7 @@ export class HomeComponent {
 
     //this.credenciales.userActive
     this.transaccionesService
-      .buscarTransacciones(userActive.username)
+      .buscarTransacciones(userActive.id)
       .then((response) => {
         this.transacciones = response.transacciones;
         this.transaccionesOriginales = response.transacciones;

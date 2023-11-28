@@ -29,8 +29,8 @@ export class TransaccionesService {
       this.http.get<any>(`${this.apiUrl}/historialTransacciones`).pipe(take(1))
     );
   }
-  async buscarTransacciones(username:any) {
-    const params = new HttpParams().set('username', username);
+  async buscarTransacciones(id:any) {
+    const params = new HttpParams().set('id', id);
     return await firstValueFrom(
       this.http.get<any>(`${this.apiUrl}/Transacciones`, { params }).pipe(take(1))
     );
